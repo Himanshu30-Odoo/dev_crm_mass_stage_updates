@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2015 DevIntelle Consulting Service Pvt.Ltd (<http://www.devintellecs.com>).
+
+For Module Support : devintelle@gmail.com  or Skype : devintelle
+ -->
+<odoo>
+    <!--form-->
+    <record id="crm_mass_stage_update_form" model="ir.ui.view">
+        <field name="name">form.mass.stage.update</field>
+        <field name="model">mass.stage.update</field>
+        <field name="arch" type="xml">
+            <form string="Mass Stage">
+                <group>
+                    <group>
+                        <field name="stage_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Update" name="action_update" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>                
+                </footer>
+            </form>
+        </field>
+
+        
+    </record>
+    <!--action-->
+    <record id="crm_mass_stage_update_action_form" model="ir.actions.act_window">
+        <field name="name">Mass Stage Update</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mass.stage.update</field>
+        <field name="view_mode">form</field>
+        <field name="binding_model_id" ref="crm.model_crm_lead"/>
+        <field name="target">new</field>
+
+    </record>
+
+
+</odoo>
